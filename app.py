@@ -14,7 +14,7 @@ documents = loader.load()
 
 print("PDF Loaded Successfully")
 
-# STEP 2 — SPLIT INTO CHUNKS
+# STEP 2 — SPLIT INTO CHUNK
 splitter = RecursiveCharacterTextSplitter(
     chunk_size=500,
     chunk_overlap=50

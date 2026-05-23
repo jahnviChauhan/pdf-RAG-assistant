@@ -1,4 +1,4 @@
-#!/home/jahnvi/RAG-pdf-chatbot/venv/bin/python3
+#!/home/jahnvi/pdf-RAG-assistant/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

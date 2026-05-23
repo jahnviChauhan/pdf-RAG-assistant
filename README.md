@@ -95,6 +95,37 @@ https://aistudio.google.com/app/apikey
 
 ---
 
+## About the PDF
+
+I used a random DBMS PDF from the internet just for testing the pipeline and retrieval system.
+
+You can replace it with any PDF of your choice.
+
+To use your own PDF:
+
+1. Add your PDF file to the project folder
+2. Rename it to:
+
+```bash
+data.pdf
+```
+
+OR change the filename inside `app.py`:
+
+```python
+loader = PyPDFLoader("your_file_name.pdf")
+```
+
+You can try it with:
+- study notes
+- research papers
+- ebooks
+- resumes
+- technical documentation
+- reports
+
+---
+
 ## Run the Application
 
 ```bash

@@ -1,26 +1,37 @@
-PDF RAG Assistant
+# PDF RAG Assistant 🚀
 
-This is my first Retrieval-Augmented Generation (RAG) project built using Python, LangChain, FAISS, and Google Gemini.
+A Retrieval-Augmented Generation (RAG) based PDF Question Answering system built using Python, LangChain, FAISS, and Google Gemini.
 
-The project reads a PDF document, converts it into searchable chunks using embeddings, stores them in a FAISS vector database, and answers user questions based on the document content.
+This project allows users to query a PDF document in natural language.  
+The system retrieves the most relevant chunks from the document using semantic similarity search and generates grounded responses using Gemini.
 
-I built this project to understand how modern AI systems retrieve information from documents instead of relying only on general model knowledge.
+---
 
-Features
-Load and process PDF files
-Split large documents into chunks
-Generate embeddings using Gemini Embeddings
-Store vectors using FAISS
-Retrieve relevant chunks using semantic similarity
-Generate answers using Gemini
-Tech Stack
-Python
-LangChain
-FAISS
-Google Gemini API
-PyPDF
-dotenv
-Project Structure
+## Features
+
+- PDF document ingestion
+- Text chunking using LangChain
+- Semantic embeddings with Gemini
+- FAISS vector database integration
+- Context-aware question answering
+- Retrieval-Augmented Generation (RAG) pipeline
+
+---
+
+## Tech Stack
+
+- Python
+- LangChain
+- FAISS
+- Google Gemini API
+- PyPDF
+- dotenv
+
+---
+
+## Project Structure
+
+```bash
 pdf-RAG-assistant/
 │
 ├── app.py
@@ -29,32 +40,72 @@ pdf-RAG-assistant/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
-Setup
-1. Clone the repository
+```
+
+---
+
+## Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/jahnviChauhan/pdf-RAG-assistant.git
 cd pdf-RAG-assistant
-2. Create virtual environment
-Linux / Mac
+```
+
+---
+
+### 2. Create Virtual Environment
+
+#### Linux / macOS
+
+```bash
 python3 -m venv venv
 source venv/bin/activate
-Windows
+```
+
+#### Windows
+
+```bash
 python -m venv venv
 venv\Scripts\activate
-3. Install dependencies
+```
+
+---
+
+### 3. Install Dependencies
+
+```bash
 pip install -r requirements.txt
-API Key Setup
+```
 
-Create a .env file and add your Gemini API key:
+---
 
-GOOGLE_API_KEY=your_api_key
+## Environment Variables
 
-Get API key from:
+Create a `.env` file in the root directory:
 
-Google AI Studio
+```env
+GOOGLE_API_KEY=your_api_key_here
+```
 
-Run the project
+Generate API key from:
+
+https://aistudio.google.com/app/apikey
+
+---
+
+## Run the Application
+
+```bash
 python3 app.py
-Example Questions
+```
+
+---
+
+## Example Queries
+
+```text
 What is DBMS?
 
 Explain normalization.
@@ -62,34 +113,53 @@ Explain normalization.
 What are the advantages of DBMS?
 
 What is functional dependency?
-How the Pipeline Works
+
+Explain 3NF.
+```
+
+---
+
+## RAG Pipeline
+
+```text
 PDF
-↓
+ ↓
+Text Extraction
+ ↓
 Chunking
-↓
+ ↓
 Embeddings
-↓
+ ↓
 FAISS Vector Store
-↓
+ ↓
 Semantic Retrieval
-↓
+ ↓
 Gemini Response
-What I Learned
+```
 
-While building this project, I learned:
+---
 
-how the RAG pipeline works
-document chunking
-embeddings and vector databases
-semantic retrieval
-LangChain basics
-debugging APIs and Python environments
+## What I Learned
 
-This project also helped me understand how AI assistants can answer questions using external knowledge sources like PDFs.
+- Fundamentals of Retrieval-Augmented Generation (RAG)
+- Vector embeddings and semantic search
+- FAISS vector database
+- LangChain workflow
+- Prompt grounding using retrieved context
+- Handling real-world API and dependency issues
 
-Future Improvements
-Streamlit UI
-Multiple PDF support
-Chat interface
-Better prompt engineering
-Deployment
+---
+
+## Future Improvements
+
+- Streamlit-based UI
+- Multi-PDF support
+- Persistent vector storage
+- Conversational memory
+- Web deployment
+
+---
+
+## License
+
+MIT License
